@@ -1,1 +1,28 @@
-providers: []
+providers: [
+  {
+    key: "bt"
+    config:
+      commands: [
+        {
+          project: "/home/jalict/Projects/SMFL_legetime"
+          source: "/home/jalict/Projects/SMFL_legetime/.build-tools.cson"
+          name: "Compile"
+          command: "g++ -c main.cpp & g++ main.o -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system & ./sfml-app"
+          wd: "."
+          env: {}
+          modifier:
+            shell:
+              command: "bash -c"
+          stdout:
+            pty: false
+            highlighting: "nh"
+            ansi_option: "ignore"
+          stderr:
+            highlighting: "nh"
+            ansi_option: "ignore"
+          output: {}
+          version: 1
+        }
+      ]
+  }
+]
