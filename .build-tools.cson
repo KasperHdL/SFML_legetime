@@ -7,7 +7,7 @@ providers: [
           project: "/home/jalict/Projects/SMFL_legetime"
           source: "/home/jalict/Projects/SMFL_legetime/.build-tools.cson"
           name: "Compile"
-          command: "g++ -c main.cpp & g++ main.o -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system & ./sfml-app"
+          command: "g++ -c main.cpp & g++ main.o -o bin/sfml-app -lsfml-graphics -lsfml-window -lsfml-system & ./bin/sfml-app"
           wd: "."
           env: {}
           modifier:
