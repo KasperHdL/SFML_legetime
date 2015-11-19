@@ -1,9 +1,11 @@
 #include <SFML/Graphics.hpp>
 
 class Player{
-    int x,y;
-  public:
+public:
     void draw(){
 
     }
+private:
+    sf::Transformable transform;
+    sf::Image image;
 }
