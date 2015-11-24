@@ -1,6 +1,5 @@
 # Executable
 bin/
 
-# Compiled object files
-*.o
-/..build-tools.cson.swp
+*.swp
+*~

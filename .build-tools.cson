@@ -4,10 +4,56 @@ providers: [
     config:
       commands: [
         {
-          project: "/home/jalict/Projects/SMFL_legetime"
-          source: "/home/jalict/Projects/SMFL_legetime/.build-tools.cson"
+          project: "/home/kaholi/projects/games/sfml_Test"
+          source: "/home/kaholi/projects/games/sfml_Test/.build-tools.cson"
+          name: "Compile & Compile Object files & Run"
+          command: "g++ -c ../../src/* && g++ *.o -o ../sfml-app -lsfml-graphics -lsfml-window -lsfml-system && ./../sfml-app"
+          wd: "bin/src"
+          env: {}
+          modifier:
+            shell:
+              command: "bash -c"
+          stdout:
+            pty: false
+            highlighting: "ha"
+          stderr:
+            highlighting: "ha"
+          output:
+            console:
+              close_success: true
+              queue_in_buffer: true
+              stdin: false
+            linter:
+              no_trace: false
+          version: 1
+        }
+        {
+          project: "/home/kaholi/projects/games/sfml_Test"
+          source: "/home/kaholi/projects/games/sfml_Test/.build-tools.cson"
           name: "Compile"
-          command: "g++ -c main.cpp & g++ main.o -o bin/sfml-app -lsfml-graphics -lsfml-window -lsfml-system & ./bin/sfml-app"
+          command: "g++ -c ../../src/*"
+          wd: "bin/src"
+          env: {}
+          modifier:
+            shell:
+              command: "bash -c"
+          stdout:
+            pty: false
+            highlighting: "ha"
+          stderr:
+            highlighting: "ha"
+          output:
+            console:
+              close_success: true
+              queue_in_buffer: true
+              stdin: false
+          version: 1
+        }
+        {
+          project: "/home/kaholi/projects/games/sfml_Test"
+          source: "/home/kaholi/projects/games/sfml_Test/.build-tools.cson"
+          name: "Compile Object files"
+          command: "g++ bin/src/main.o -o bin/sfml-app -lsfml-graphics -lsfml-window -lsfml-system"
           wd: "."
           env: {}
           modifier:
@@ -15,12 +61,32 @@ providers: [
               command: "bash -c"
           stdout:
             pty: false
+            highlighting: "ha"
+          stderr:
+            highlighting: "ha"
+          output: {}
+          version: 1
+        }
+        {
+          project: "/home/kaholi/projects/games/sfml_Test"
+          source: "/home/kaholi/projects/games/sfml_Test/.build-tools.cson"
+          name: "Run"
+          command: "./bin/sfml-app"
+          wd: "."
+          env: {}
+          modifier: {}
+          stdout:
+            pty: false
             highlighting: "nh"
             ansi_option: "ignore"
           stderr:
             highlighting: "nh"
             ansi_option: "ignore"
-          output: {}
+          output:
+            console:
+              close_success: true
+              queue_in_buffer: true
+              stdin: false
           version: 1
         }
       ]
