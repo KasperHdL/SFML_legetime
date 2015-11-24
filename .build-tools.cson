@@ -13,18 +13,17 @@ providers: [
           modifier:
             shell:
               command: "bash -c"
+            save_all: {}
           stdout:
             pty: false
-            highlighting: "ha"
+            highlighting: "ht"
           stderr:
-            highlighting: "ha"
+            highlighting: "ht"
           output:
             console:
               close_success: true
               queue_in_buffer: true
               stdin: false
-            linter:
-              no_trace: false
           version: 1
         }
         {
@@ -37,16 +36,15 @@ providers: [
           modifier:
             shell:
               command: "bash -c"
+            save_all: {}
           stdout:
             pty: false
             highlighting: "ha"
           stderr:
             highlighting: "ha"
           output:
-            console:
-              close_success: true
-              queue_in_buffer: true
-              stdin: false
+            linter:
+              no_trace: false
           version: 1
         }
         {
