@@ -7,7 +7,7 @@ providers: [
           project: "/home/kaholi/projects/games/sfml_Test"
           source: "/home/kaholi/projects/games/sfml_Test/.build-tools.cson"
           name: "Compile & Compile Object files & Run"
-          command: "g++ -c ../../src/* && g++ *.o -o ../sfml-app -lsfml-graphics -lsfml-window -lsfml-system && ./../sfml-app"
+          command: "g++ -c ../../src/*.cpp && g++ *.o -o ../sfml-app -lsfml-graphics -lsfml-window -lsfml-system && ./../sfml-app"
           wd: "bin/src"
           env: {}
           modifier:
